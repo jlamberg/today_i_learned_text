@@ -1,4 +1,6 @@
-# 2022-02-15
+# Entries
+
+## 2022-02-15
 
 Let's assume we have an ActiveRecord class Track with the attributes `id`, `title`, `length`, and some others, and that `title` is aliased by `name` using `alias_attribute :name, :title` (with parameters "newname, oldname").
 
@@ -38,7 +40,7 @@ end
 track.as_json(only: attributes)     # => {"id"=>6, "title"=>"Jeremy", "length"=>318}
 ```
 
-# 2022-10-19
+## 2022-10-19
 
 I was looking at a codebase where I noticed the use of numbered parameters, a new feature in Ruby 2.7 some 3 years ago.
 
@@ -60,7 +62,7 @@ This feature is very likely to cause confusion because it works differently for 
 
 My advice would be to not use numbered parameters at all, because of the potential confusion and errors: it is not obvious what the parameter refers to because it is also not always obvious what the existing data structure is, either, and especially in the cases when the data structure changes. (I've seen these kinds of data structure changes happen many times over the years, so been there, done that, and don't want to make code worse or more bug-prone on purpose.)
 
-## Arrays
+### Arrays
 
 With one-dimensional arrays, you will get what you most likely expect:
 
@@ -131,7 +133,7 @@ Yes, there are better ways to conway the meaning of the code, for example:
 
 Here, the underscores are subelements we are not interested in, but this is not particularly pretty, either.
 
-## Hashes
+### Hashes
 
 Unfortunately, hashes also don't work as expected:
 
