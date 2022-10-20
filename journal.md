@@ -125,7 +125,7 @@ It is the same as using `_2` to access the second subelements.
 
 The maximum numbered parameter is `_9` that accesses the 9th subelement. (Using `_p1[20]` works, though, to access the 21st subelement, but it doesn't make much sense from code readability perspective.)
 
-Yes, there are better ways to conway the meaning of the code, for example:
+Yes, there are better ways to convey the meaning of the code, for example:
 
 ```ruby
 > [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ].each {|_, important, _| p important }
